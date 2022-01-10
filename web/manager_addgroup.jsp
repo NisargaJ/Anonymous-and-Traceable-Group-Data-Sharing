@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Anonymous and Traceable</title>
+<link href="screen.css" rel="stylesheet" type="text/css" media="screen">
+<link href="style.css" rel="stylesheet" type="text/css" media="screen">
+<link rel="stylesheet" href="nivo-slider/default/default.css" type="text/css" media="screen" /><link rel="stylesheet" href="nivo-slider/default/nivo-slider.css" type="text/css" media="screen" />
+</head>
+<%
+            if (request.getParameter("msg") != null) {%>
+        <script>alert('Group Added');</script>
+        <%}
+            if (request.getParameter("msg1") != null) {%>
+        <script>alert('Error in Group Add ');</script> 
+        
+        <%}
+        %> 
+<body>
+<center><h1>Anonymous and Traceable Group Data Sharing in Cloud Computing</h1></center>
+	<header>
+		<span class="container">
+			<nav>
+				<ul type="none" class="last">
+					<li>
+						<a href="managerhome.jsp">home</a></li>
+					<li class="active">
+						<a href="manager_addgroup.jsp">Add Groups</a></li>
+					<li>
+						<a href="manager_viewgroup.jsp">View Groups</a></li>
+                                        
+                                        <li>
+						<a href="manager_viewrequests.jsp">View Requests</a></li>
+                                        <li>
+						<a href="manager_filerequests.jsp">File Requests</a></li>
+                                        <li>
+						<a href="manager_memberrequests.jsp">Member Requests</a></li>
+					<li>
+						<a href="index.html">Logout</a></li>
+                                        
+				</ul></nav></span>
+	</header>
+	<span class="clearfix"></span>
+	<section id="slider_wrapper" class="under_header slider-wrapper theme-default container">
+		<div id="slider" class="nivoSlider">
+			<img src="images/1.png" data-thumb="images/toystory.jpg" alt="" />
+			<img src="images/2.png" data-thumb="images/walle.jpg" alt=""  />
+			<img src="images/3.png" data-thumb="images/nemo.jpg" alt=""  />
+		</div>
+
+	</section>
+       
+        
+          <center>   
+       <p align="justify">
+    <p><font color="black" size="5"> Add Group </font></p><br/>
+    
+    <form name="myform" action="manager_addgroupact.jsp" method="post" onsubmit="return validateform()">
+    <table align="center" width="321">
+    <tr>
+    <td width="191" height="43"><font color="black">Group Name </td>
+    <td width="218"><input name="groupname" required="" placeholder="Group Name" /></td>
+    </tr>
+   
+   
+   
+
+    <tr>
+    <td height="43" rowspan="3">
+    <p>&nbsp;</p></td>
+    <td align="left" valign="middle"> <p>&nbsp;
+    </p>
+    <p>
+    <input name="submit" type="submit" value="ADD Group" />
+    </p>
+    <div align="right">
+    </div></td>
+    </tr>
+    </table>
+    </form>
+    </p>     
+        
+     </center>   
+        
+        
+        
+        
+        
+        
+        
+    
+
+	<span class="clearfix"></span>
+	
+ <script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+</body>
+</html>
